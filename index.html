@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    
+</head>
+<body>
+    <sidebar class="sidebar">
+        <div><img src="images/logo.png" class="logo"/></div>
+        <ul>
+            <li class="active"><i class="fas fa-home"></i> Home</li>
+            <li><i class="fas fa-exchange"></i> Operation</li>
+            <li><i class="fas fa-map-location-dot"></i> Map</li>
+            <li><i class="fas fa-chart-bar"></i> Reports</li>
+            <li><i class="fas fa-sliders"></i> Control Panel</li>
+        </ul>
+        <div class="help">
+            <div class="help-button">
+                <div class="help-icon">
+                    <!-- <i class="fas fa-question-circle"></i> -->
+                    <img src="images/help.png"/>
+                </div>
+                <div class="help-content">
+                    <h3>Need Help?</h3>
+                    <p>Click here to find <br/> Functionalities, Help, and More!</p>
+                    <button>Discover</button>
+                </div>
+            </div>
+        </div>
+    </sidebar>
+    <div class="main-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="header-icons">
+                <div class="icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-bell">
+                        <span class="notification-dot"></span>
+                    </i>
+                </div>
+                <div class="profile">
+                    <input type="checkbox" id="profile-toggle">
+                    <label for="profile-toggle">
+                        <img src="images/dummy-profile-pic.png" alt="Profile Picture" class="profile-pic">
+                        <div class="profile-info">
+                            <span class="profile-name">John Doe</span>
+                            <span class="profile-role">Admin</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><i class="fas fa-user"></i> My Account</li>
+                            <li><i class="fas fa-cog"></i> Settings</li>
+                            <li><i class="fas fa-power-off"></i> Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="dashboard">
+                <div class="welcome">Welcome! John Doe</div>              
+                   
+                    <section class="fleet fleet-container">
+                        <div class="fleet-header">
+                            <h3>VPark Fleet</h3>
+                            <div class="view-options">
+                                <input type="radio" id="grid-view" name="view">
+                                <label for="grid-view"><i class="fas fa-th-large"></i></label>
+                                <input type="radio" id="list-view" name="view" checked>
+                                <label for="list-view"><i class="fa-solid fa-align-left"></i></label>
+                            </div>
+                        </div>
+                        <div class="fleet-list">
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle warning"></span>
+                                    <span class="vehicle-name">Smart Vehicle 1</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle active"></span>
+                                    <span class="vehicle-name">Smart Vehicle 2</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle active"></span>
+                                    <span class="vehicle-name">Smart Vehicle 3</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle warning"></span>
+                                    <span class="vehicle-name">Smart Vehicle 4</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle closed"></span>
+                                    <span class="vehicle-name">Smart Vehicle 5</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle active"></span>
+                                    <span class="vehicle-name">Smart Vehicle 6</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="fleet-item">
+                                <summary class="fleet-item-header">
+                                    <img src="images/vehicle.png" alt="Vehicle Image">
+                                    <span class="status-circle active"></span>
+                                    <span class="vehicle-name">Smart Vehicle 7</span>
+                                </summary>
+                                <div class="fleet-item-status">
+                                    <div class="status-item">
+                                        <img src="images/camera-icon.svg" alt="Camera Icon">
+                                        <span class="item">Camera</span>
+                                        <span class="status">Online</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/network-icon.svg" alt="Network Icon">
+                                        <span class="item">Network</span>
+                                        <span class="status">Available</span>
+                                        <button class="status-button active">Active <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/memory-icon.svg" alt="Memory Icon">
+                                        <span class="item">Memory</span>
+                                        <span class="status">20%</span>
+                                        <button class="status-button active">Normal <span class="status-indicator active"></span></button>
+                                    </div>
+                                    <div class="status-item">
+                                        <img src="images/cpu-icon.svg" alt="CPU Temp Icon">
+                                        <span class="item">CPU Temp</span>
+                                        <span class="status">70°</span>
+                                        <button class="status-button closed">High <span class="status-indicator closed"></span></button>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+               
+                <section class="chart-row">
+                    <div class="container">
+                        <div class="left-side">
+                          <h3>Active Vehicles Vs. In-Active Vehicles</h3>
+                          <div class="legend">
+                            <div class="legend-item">
+                              <div class="color-box inactive"></div>
+                              <div class="legend-label">Inactive</div>
+                            </div>
+                            <div class="legend-item">
+                              <div class="color-box active"></div>
+                              <div class="legend-label">Active</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                          <div id="piechart" class="chart-container"></div>
+                        </div>
+                      </div>
+                    <div class="stats-row">
+                        <div class="stats-box">
+                            <img src="images/violations.png">
+                            <div class="stat-number">2,108</div>
+                            <div class="stat-label">Total Violations</div>
+                        </div>
+                        <div class="stats-box">
+                            <img src="images/dectations.png">
+                            <div class="stat-number">100,000</div>
+                            <div class="stat-label">Total Detections</div>
+                        </div>
+                        <div class="stats-box">
+                            <img src="images/active.png">
+                            <div class="stat-number">48</div>
+                            <div class="stat-label">Total Active Vehicles</div>
+                        </div>
+                        <div class="stats-box">
+                            <img src="images/distance.png">
+                            <div class="stat-number">50,000</div>
+                            <div class="stat-label">Total Distance in KM</div>
+                        </div>
+                    </div>
+                </section>
+                
+            <section class="snap">
+                <div class="snap-button">
+                    <div class="snap-icon">
+                        <img src="images/snap.png" width="315"/>
+                    </div>
+                    <div class="snap-content">
+                        <h3>Get a bird's eye <span class="snap-view">view</span> in a snap.</h3>
+                        <p>We equip you with the tools to customise your dashboards and track fleet status,<br> decorations, and violations at a glance.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+        </div>
+        
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+    
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Vehicles', 'Percentage'],
+            ['Inactive', 60],
+            ['Active', 40]
+          ]);
+    
+          var options = {
+            width: 350,
+            height: 280,
+            colors: [
+              '#CAE4FA',
+              '#1070C5' 
+            ],
+            pieSliceText: 'label',
+            legend: { position: 'none' },
+            tooltip: {
+              trigger: 'both',
+              isHtml: true,   
+            },
+            tooltipTextStyle: {
+              color: '#333',
+              fontSize: 14
+            }
+          };
+    
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+      </script>
+</body>
+</html>
